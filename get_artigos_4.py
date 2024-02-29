@@ -50,7 +50,7 @@ def proc_art_contents(art):
     for tag in art.find_all("table"): 
         tag.insert(0, "\n##Tabela")
     for strong_tag in art.find_all("strong"):
-        strong_tag.replace_with(bs(str(strong_tag).replace('<strong>', '<b>').replace('</strong>', '</b>'), 'html.parser'))
+        strong_tag.replace_with(bs(str(strong_tag).replace('<strong>', '<b>').replace('</strong>', '</b>'), 'html.parser')) #coloca em bold
     finalt = art.get_text()
     finalt = re.sub(r"\n{3,}",r"\n\n",finalt)
     return art
