@@ -49,7 +49,7 @@ with open("dados_artigos.yaml", "w", encoding="utf-8") as file:
 
 fo = open("nomes_arquivos.txt", "w", encoding="utf-8")
 
-
+#Processar slides
 def processa_slides(art):
     slide_files = []
     for div_slide in art.find_all("div", class_="slide"):
